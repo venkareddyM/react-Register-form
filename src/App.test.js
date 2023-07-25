@@ -1,8 +1,14 @@
-import { render, screen } from '@testing-library/react';
+// npm install jest @testing-library/react @testing-library/jest-dom --save-dev
+
+import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+// Test case 1
+test('renders Register Form heading', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const headingElement = screen.getByText('Register Form');
+  expect(headingElement).toBeInTheDocument();
 });
+
+
